@@ -26,6 +26,9 @@
 @property (nonatomic, strong) NSMutableArray* customControls;
 @property (nonatomic, strong) NSMutableArray* portraitControls;
 @property (nonatomic, strong) NSMutableArray* landscapeControls;
+
+@property (nonatomic, assign) BOOL isControlsEnabled;
+@property (nonatomic, assign) BOOL isControlsHidden;
 @end
 
 @implementation VKVideoPlayerView

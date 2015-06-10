@@ -76,8 +76,8 @@
 @property (nonatomic, strong) IBOutlet DTAttributedLabel* captionBottomView;
 @property (nonatomic, strong) IBOutlet UIView* captionTopContainerView;
 
-@property (nonatomic, assign) BOOL isControlsEnabled;
-@property (nonatomic, assign) BOOL isControlsHidden;
+@property (nonatomic, readonly) BOOL isControlsEnabled;
+@property (nonatomic, readonly) BOOL isControlsHidden;
 
 @property (nonatomic, weak) id<VKVideoPlayerViewDelegate> delegate;
 
