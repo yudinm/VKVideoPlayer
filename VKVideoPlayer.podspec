@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "5.0"
   s.ios.deployment_target = '5.0'
-  s.source       = { :git => "https://github.com/viki-org/VKVideoPlayer.git", :tag => s.version.to_s }
+  s.source       = { :git => "http://git.mebobeijing.com:3000/vince.wang/VKVideoPlayer.git" }
 
   s.source_files = 'Classes/ios/*.{h,m}'
 
