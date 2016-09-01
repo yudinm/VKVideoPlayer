@@ -17,15 +17,6 @@
 {
   [DDLog addLogger:[DDASLLogger sharedInstance]];
   [DDLog addLogger:[DDTTYLogger sharedInstance]];
-
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  self.window.backgroundColor = [UIColor whiteColor];
-  [self.window makeKeyAndVisible];
-  
-  UIViewController *rootViewController = [[DemoRootViewController alloc] init];
-  UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-  self.window.rootViewController = navi;
   
   return YES;
 }

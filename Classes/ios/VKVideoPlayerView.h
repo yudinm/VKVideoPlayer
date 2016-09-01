@@ -22,6 +22,7 @@
 - (void)fullScreenButtonTapped;
 - (void)playButtonPressed;
 - (void)pauseButtonPressed;
+- (void)replayButtonPressed;
 
 - (void)nextTrackButtonPressed;
 - (void)previousTrackButtonPressed;
@@ -56,9 +57,11 @@
 @property (nonatomic, strong) IBOutlet UIButton* topSettingsButton;
 
 @property (nonatomic, strong) IBOutlet UIButton* playButton;
+@property (nonatomic, strong) IBOutlet UIButton* replayButton;
 @property (nonatomic, strong) IBOutlet UIButton* nextButton;
 @property (nonatomic, strong) IBOutlet UILabel* currentTimeLabel;
 @property (nonatomic, strong) IBOutlet VKScrubber* scrubber;
+@property (nonatomic, strong) IBOutlet VKScrubber* progressBar;
 @property (nonatomic, strong) IBOutlet UILabel* totalTimeLabel;
 @property (nonatomic, strong) IBOutlet UIButton* rewindButton;
 @property (nonatomic, strong) IBOutlet UIButton* fullscreenButton;
@@ -96,6 +99,7 @@
 
 - (IBAction)fullscreenButtonTapped:(id)sender;
 - (IBAction)playButtonTapped:(id)sender;
+- (IBAction)replayButtonTapped:(id)sender;
 - (IBAction)nextTrackButtonPressed:(id)sender;
 - (IBAction)previousTrackButtonPressed:(id)sender;
 - (IBAction)rewindButtonPressed:(id)sender;
