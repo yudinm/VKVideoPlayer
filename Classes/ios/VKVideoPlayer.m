@@ -1309,7 +1309,7 @@ typedef enum {
         }
     }];
     
-    [[UIApplication sharedApplication] setStatusBarOrientation:self.visibleInterfaceOrientation animated:YES];
+//    [[UIApplication sharedApplication] setStatusBarOrientation:self.visibleInterfaceOrientation animated:YES];
     [self updateCaptionView:self.view.captionBottomView caption:self.captionBottom playerView:self.view];
     [self updateCaptionView:self.view.captionTopView caption:self.captionTop playerView:self.view];
     self.view.fullscreenButton.selected = self.isFullScreen = UIInterfaceOrientationIsLandscape(deviceOrientation);
