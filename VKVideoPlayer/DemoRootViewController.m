@@ -82,8 +82,8 @@ typedef enum {
     if ([viewController isKindOfClass:[VKVideoPlayerViewController class]]) {
         VKVideoPlayerViewController *videoController = (VKVideoPlayerViewController*)viewController;
         //    [videoController playVideoWithStreamURL:[NSURL URLWithString:@"http://localhost:12345/ios_240.m3u8"]];
-        VKVideoPlayerTrack *track = [[VKVideoPlayerTrack alloc] initWithStreamURL:[NSURL URLWithString:@"http://localhost:12345/ios_240.m3u8"]];
-        track.title = @"视屏应该要有个标题";
+        VKVideoPlayerTrack *track = [[VKVideoPlayerTrack alloc] initWithStreamURL:[NSURL URLWithString:@"http://artways.ufile.ucloud.com.cn/哈尔斯的快拍术_720p.mp4?UCloudPublicKey=ucloudartways%40mebobeijing.com1423550196000100995418&Signature=KJMWB1KFgk2qO3vYp6ad8RYx8kQ%3D&Expires=1477691387"]];
+        track.title = @"哈尔斯的快拍术";
         [videoController setSubtitle:[self testCaption:@"testCaptionBottom"]];
         [videoController.player performOrientationChange:UIInterfaceOrientationLandscapeRight];
         [videoController.player loadVideoWithTrack:track];

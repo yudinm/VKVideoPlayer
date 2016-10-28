@@ -73,23 +73,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     [self.scrubber addTarget:self action:@selector(updateTimeLabels) forControlEvents:UIControlEventValueChanged];
     
-//      UIView* overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bottomControlOverlay.frame.size.width, self.bottomControlOverlay.frame.size.height)];
-//      overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-//      overlay.backgroundColor = THEMECOLOR(@"colorBackground8");
-//      overlay.alpha = 0.6f;
-//      [self.bottomControlOverlay addSubview:overlay];
-//      [self.bottomControlOverlay sendSubviewToBack:overlay];
-    
-    //  overlay = [[UIView alloc] initWithFrame:self.topControlOverlay.frame];
-    //  overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    //  overlay.backgroundColor = THEMECOLOR(@"colorBackground8");
-    //  overlay.alpha = 0.6f;
-    //  [self.topControlOverlay addSubview:overlay];
-    //  [self.topControlOverlay sendSubviewToBack:overlay];
-    
     [self.controls setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5]];
-
-    
     
     [self.captionButton setTitle:[VKSharedVideoPlayerSettingsManager.subtitleLanguageCode uppercaseString] forState:UIControlStateNormal];
     
@@ -119,6 +103,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self.progressBar setMinimumTrackImage:
      [[UIImage imageNamed:@"VKScrubber_min"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)]
                                   forState:UIControlStateNormal];
+    
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -237,6 +222,14 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         [self.scrubber setValue:[[info objectForKey:@"scrubberValue"] floatValue] animated:YES];
         [self updateTimeLabels];
     });
+}
+
+-(void)resetTimeLabelsInit{
+    [self.currentTimeLabel setText:@"00:00"];
+    [self.totalTimeLabel setText:@"00:00"];
+    [self.progressBar setValue:0.0];
+    [self.scrubber setValue:0.0];
+    [self updateTimeLabels];
 }
 
 - (void)updateTimeLabels {

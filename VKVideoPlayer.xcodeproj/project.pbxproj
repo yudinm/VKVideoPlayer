@@ -473,6 +473,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Viki Inc.";
 				TargetAttributes = {
+					1BB6ADB618EE626A00767FA3 = {
+						DevelopmentTeam = JD6JEPR7LR;
+					};
 					1BB6ADD118EE626A00767FA3 = {
 						TestTargetID = 1BB6ADB618EE626A00767FA3;
 					};
@@ -745,6 +748,7 @@
 			baseConfigurationReference = 7292642FD2A4B4C34885E28D /* Pods-VKVideoPlayer.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEVELOPMENT_TEAM = JD6JEPR7LR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VKVideoPlayer/VKVideoPlayer-Prefix.pch";
 				INFOPLIST_FILE = "VKVideoPlayer/VKVideoPlayer-Info.plist";
@@ -761,6 +765,7 @@
 			baseConfigurationReference = 2EE9957279B5D1D90CE02251 /* Pods-VKVideoPlayer.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEVELOPMENT_TEAM = JD6JEPR7LR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VKVideoPlayer/VKVideoPlayer-Prefix.pch";
 				INFOPLIST_FILE = "VKVideoPlayer/VKVideoPlayer-Info.plist";

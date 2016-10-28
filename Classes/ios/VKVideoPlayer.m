@@ -432,6 +432,8 @@ typedef enum {
 }
 
 - (void)playVideoTrack:(id<VKVideoPlayerTrackProtocol>)track {
+    
+    [self.activePlayerView resetTimeLabelsInit]; // add by vince
     if ([self.delegate respondsToSelector:@selector(shouldVideoPlayer:startVideo:)]) {
         if (![self.delegate shouldVideoPlayer:self startVideo:track]) {
             return;
@@ -822,6 +824,7 @@ typedef enum {
                 [self.player pause];
                 break;
             case VKVideoPlayerStateSuspend:
+                [self setLoading:YES];
                 break;
             case VKVideoPlayerStateError:{
                 [self.player pause];
@@ -1084,8 +1087,10 @@ typedef enum {
 - (void)setLoading:(BOOL)loading {
     if (loading) {
         [self.view.activityIndicator startAnimating];
+        [self.view.playButton setHidden:YES];
     } else {
         [self.view.activityIndicator stopAnimating];
+        [self.view.playButton setHidden:NO];
     }
 }
 
