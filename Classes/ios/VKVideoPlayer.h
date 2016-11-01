@@ -78,8 +78,8 @@ typedef enum {
 - (void)videoPlayer:(VKVideoPlayer*)videoPlayer didPlayToEnd:(id<VKVideoPlayerTrackProtocol>)track;
 - (void)videoPlayer:(VKVideoPlayer*)videoPlayer didControlByEvent:(VKVideoPlayerControlEvent)event;
 - (void)videoPlayer:(VKVideoPlayer*)videoPlayer didChangeSubtitleFrom:(NSString*)fronLang to:(NSString*)toLang;
-- (void)videoPlayer:(VKVideoPlayer*)videoPlayer willChangeOrientationTo:(UIInterfaceOrientation)orientation;
-- (void)videoPlayer:(VKVideoPlayer*)videoPlayer didChangeOrientationFrom:(UIInterfaceOrientation)orientation;
+//- (void)videoPlayer:(VKVideoPlayer*)videoPlayer willChangeOrientationTo:(UIInterfaceOrientation)orientation;
+//- (void)videoPlayer:(VKVideoPlayer*)videoPlayer didChangeOrientationFrom:(UIInterfaceOrientation)orientation;
 
 - (void)handleErrorCode:(VKVideoPlayerErrorCode)errorCode track:(id<VKVideoPlayerTrackProtocol>)track customMessage:(NSString*)customMessage;
 @end
@@ -115,8 +115,6 @@ VKVideoPlayerViewDelegate
 @property (nonatomic, strong) AVPlayerItem* playerItem;
 @property (nonatomic, assign) BOOL playerControlsEnabled;
 @property (nonatomic, strong) id<VKPlayer> player;
-@property (nonatomic, assign) UIInterfaceOrientation visibleInterfaceOrientation;
-@property (nonatomic, assign) UIInterfaceOrientationMask supportedOrientations;
 @property (nonatomic, assign) BOOL isFullScreen;
 
 @property (nonatomic, strong) id<VKVideoPlayerExternalMonitorProtocol> externalMonitor;
@@ -126,7 +124,6 @@ VKVideoPlayerViewDelegate
 
 @property (nonatomic, assign) CGRect portraitFrame;
 @property (nonatomic, assign) CGRect landscapeFrame;
-@property (nonatomic, assign) BOOL forceRotate;
 
 
 - (id)initWithVideoPlayerView:(VKVideoPlayerView*)videoPlayerView;
@@ -136,7 +133,6 @@ VKVideoPlayerViewDelegate
 - (BOOL)isPlayingVideo;
 - (BOOL)isPlayingOnExternalDevice;
 - (NSTimeInterval)currentTime;
-- (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation;
 
 #pragma mark - Error Handling
 - (NSString*)videoPlayerErrorCodeToString:(VKVideoPlayerErrorCode)code;

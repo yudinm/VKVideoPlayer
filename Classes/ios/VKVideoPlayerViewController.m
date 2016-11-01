@@ -55,7 +55,6 @@
   self.player = [[VKVideoPlayer alloc] init];
   self.player.delegate = self;
   self.player.view.frame = self.view.bounds;
-  self.player.forceRotate = YES;
   [self.view addSubview:self.player.view];
   
   if (VKSharedAirplay.isConnected) {
@@ -106,19 +105,6 @@
 - (void)videoPlayer:(VKVideoPlayer*)videoPlayer didControlByEvent:(VKVideoPlayerControlEvent)event {
   if (event == VKVideoPlayerControlEventTapDone) {
     [self dismissViewControllerAnimated:YES completion:nil];
-  }
-}
-
-#pragma mark - Orientation
-- (BOOL)shouldAutorotate {
-  return NO;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  if (self.player.isFullScreen) {
-    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-  } else {
-    return NO;
   }
 }
 

@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11521.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,13 +49,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" id="56" customClass="VKVideoPlayerLayerView">
-                    <frame key="frameInset"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                 </view>
                 <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1112" contentMode="scaleToFill" id="59" customClass="DTAttributedLabel">
-                    <frame key="frameInset" minX="20" height="25.00%" maxX="20" maxY="20"/>
+                    <rect key="frame" x="20" y="120" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration">
@@ -62,7 +64,7 @@
                     </accessibility>
                 </view>
                 <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="61" userLabel="Label - This is an advertisement. Your video will resume shortly.">
-                    <frame key="frameInset"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <string key="text">This is an advertisement.
@@ -72,11 +74,11 @@ Your video will resume shortly.</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <view clipsSubviews="YES" contentMode="scaleToFill" id="62">
-                    <frame key="frameInset" minX="4.06%" width="91.56%" height="61.11%"/>
+                    <rect key="frame" x="13" y="0.0" width="293" height="110"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1111" contentMode="scaleToFill" id="63" customClass="DTAttributedLabel">
-                            <frame key="frameInset" minY="10" height="43.00%"/>
+                            <rect key="frame" x="0.0" y="10" width="293" height="43"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
@@ -84,15 +86,15 @@ Your video will resume shortly.</string>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" id="104">
-                    <frame key="frameInset"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="103">
-                            <frame key="frameInset"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="105">
-                            <frame key="frameInset" minX="6.25%" width="87.50%" height="21" maxY="54"/>
+                            <rect key="frame" x="20" y="105" width="280" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,20 +106,20 @@ Your video will resume shortly.</string>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="31">
-                    <frame key="frameInset"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="92" userLabel="Button Panel">
-                            <frame key="frameInset" height="90"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" id="xtv-gf-Qvy">
-                            <frame key="frameInset" height="46"/>
+                        <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="xtv-gf-Qvy">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lRL-G6-RP6">
-                                    <frame key="frameInset" minX="6" minY="6" width="40" height="40"/>
+                                    <rect key="frame" x="6" y="6" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="VKVideoPlayer_cross.png">
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,29 +129,29 @@ Your video will resume shortly.</string>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view contentMode="scaleToFill" id="32">
-                            <frame key="frameInset" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="89">
-                                    <frame key="frameInset" minX="44" height="44" maxX="60"/>
+                                    <rect key="frame" x="44" y="0.0" width="216" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LWl-fl-KpR">
-                                    <frame key="frameInset" width="44" height="44"/>
+                                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LWl-fl-KpR">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <state key="normal" image="VKVideoPlayer_cross.png">
+                                    <state key="normal" title="Done">
                                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="llE-GB-LQt"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="43" customClass="VKPickerButton">
-                                    <frame key="frameInset" width="44" height="44" maxX="15"/>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="43" customClass="VKPickerButton">
+                                    <rect key="frame" x="261" y="0.0" width="44" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                     <state key="normal" title="AUTO">
@@ -170,36 +172,38 @@ Your video will resume shortly.</string>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <view contentMode="scaleToFill" id="3">
-                            <frame key="frameInset" height="44"/>
+                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="19">
-                                    <frame key="frameInset" width="40" height="44"/>
+                                    <rect key="frame" x="280" y="0.0" width="40" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83">
-                                    <frame key="frameInset" width="40" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="Cpr-9x-8HU" customClass="VKScrubber">
-                                    <frame key="frameInset" minX="46" height="29" maxX="46" maxY="7"/>
+                                <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" id="Cpr-9x-8HU" customClass="VKScrubber">
+                                    <rect key="frame" x="46" y="8" width="228" height="29"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="18" customClass="VKScrubber">
-                                    <frame key="frameInset" minX="46" height="29" maxX="46" maxY="7"/>
+                                <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" id="18" customClass="VKScrubber">
+                                    <rect key="frame" x="46" y="8" width="228" height="29"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </slider>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="17">
-                            <frame key="frameInset" minX="50.00%" minY="50.00%" width="44" height="44"/>
+                            <rect key="frame" x="138" y="68" width="44" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" image="VKVideoPlayer_pause.png">
@@ -215,7 +219,7 @@ Your video will resume shortly.</string>
                             </connections>
                         </button>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aqz-Wk-un4">
-                            <frame key="frameInset" minX="50.00%" minY="50.00%" width="44" height="44"/>
+                            <rect key="frame" x="138" y="68" width="44" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" image="VKVideoPlayer_replay.png">
@@ -235,7 +239,7 @@ Your video will resume shortly.</string>
                     <gestureRecognizers/>
                 </view>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="54">
-                    <frame key="frameInset" minX="49.82%" minY="49.65%" width="37" height="37"/>
+                    <rect key="frame" x="141" y="71" width="37" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                 </activityIndicatorView>

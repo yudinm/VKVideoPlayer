@@ -429,12 +429,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB6ADE318EE626A00767FA3 /* Build configuration list for PBXNativeTarget "VKVideoPlayer" */;
 			buildPhases = (
-				9BF41446AE7CE7CCB29FDF66 /* 📦 Check Pods Manifest.lock */,
+				9BF41446AE7CE7CCB29FDF66 /* [CP] Check Pods Manifest.lock */,
 				1BB6ADB318EE626A00767FA3 /* Sources */,
 				1BB6ADB418EE626A00767FA3 /* Frameworks */,
 				1BB6ADB518EE626A00767FA3 /* Resources */,
-				15DEA7242F05C91EB4B93245 /* 📦 Embed Pods Frameworks */,
-				C775F526C56F245B0BC3405B /* 📦 Copy Pods Resources */,
+				15DEA7242F05C91EB4B93245 /* [CP] Embed Pods Frameworks */,
+				C775F526C56F245B0BC3405B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,7 +474,7 @@
 				ORGANIZATIONNAME = "Viki Inc.";
 				TargetAttributes = {
 					1BB6ADB618EE626A00767FA3 = {
-						DevelopmentTeam = JD6JEPR7LR;
+						DevelopmentTeam = K2B5R7D5U8;
 					};
 					1BB6ADD118EE626A00767FA3 = {
 						TestTargetID = 1BB6ADB618EE626A00767FA3;
@@ -558,14 +558,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15DEA7242F05C91EB4B93245 /* 📦 Embed Pods Frameworks */ = {
+		15DEA7242F05C91EB4B93245 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,14 +573,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKVideoPlayer/Pods-VKVideoPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BF41446AE7CE7CCB29FDF66 /* 📦 Check Pods Manifest.lock */ = {
+		9BF41446AE7CE7CCB29FDF66 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,14 +588,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C775F526C56F245B0BC3405B /* 📦 Copy Pods Resources */ = {
+		C775F526C56F245B0BC3405B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,7 +748,7 @@
 			baseConfigurationReference = 7292642FD2A4B4C34885E28D /* Pods-VKVideoPlayer.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DEVELOPMENT_TEAM = JD6JEPR7LR;
+				DEVELOPMENT_TEAM = K2B5R7D5U8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VKVideoPlayer/VKVideoPlayer-Prefix.pch";
 				INFOPLIST_FILE = "VKVideoPlayer/VKVideoPlayer-Info.plist";
@@ -765,7 +765,7 @@
 			baseConfigurationReference = 2EE9957279B5D1D90CE02251 /* Pods-VKVideoPlayer.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DEVELOPMENT_TEAM = JD6JEPR7LR;
+				DEVELOPMENT_TEAM = K2B5R7D5U8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VKVideoPlayer/VKVideoPlayer-Prefix.pch";
 				INFOPLIST_FILE = "VKVideoPlayer/VKVideoPlayer-Info.plist";

@@ -99,10 +99,6 @@ typedef enum {
     self.scrubbing = NO;
     self.beforeSeek = 0.0;
     self.previousPlaybackTime = 0;
-    //  self.supportedOrientations = [[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:[[UIApplication sharedApplication] keyWindow]];
-    self.supportedOrientations = VKSharedUtility.isPad ? UIInterfaceOrientationMaskAll : UIInterfaceOrientationMaskAllButUpsideDown;
-    
-    self.forceRotate = NO;
     
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
@@ -115,10 +111,6 @@ typedef enum {
     [self.view setPlayButtonsSelected:NO];
     [self.view.scrubber setValue:0.0f animated:NO];
     self.view.controlHideCountdown = [self.view.playerControlsAutoHideTime integerValue];
-    
-    if (!self.forceRotate) {
-        self.view.fullscreenButton.hidden = YES;
-    }
 }
 
 - (void)loadCurrentVideoTrack {
@@ -197,13 +189,10 @@ typedef enum {
 
 - (void)addObservers {
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    //  [defaultCenter addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
-    //  [defaultCenter addObserver:self selector:@selector(applicationDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     [defaultCenter addObserver:self selector:@selector(volumeChanged:) name:@"AVSystemController_SystemVolumeDidChangeNotification" object:nil];
     
     [defaultCenter addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     [defaultCenter addObserver:self selector:@selector(playerItemReadyToPlay) name:kVKVideoPlayerItemReadyToPlay object:nil];
-    [defaultCenter addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     [defaults addObserver:self forKeyPath:kVKSettingsSubtitlesEnabledKey options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:nil];
@@ -977,11 +966,11 @@ typedef enum {
 - (void)fullScreenButtonTapped {
     self.isFullScreen = self.view.fullscreenButton.selected;
     
-    if (self.isFullScreen) {
-        [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
-    } else {
-        [self performOrientationChange:UIInterfaceOrientationPortrait];
-    }
+//    if (self.isFullScreen) {
+//        [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
+//    } else {
+//        [self performOrientationChange:UIInterfaceOrientationPortrait];
+//    }
     
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapFullScreen];
@@ -1070,19 +1059,19 @@ typedef enum {
     }
 }
 
-- (void)layoutNavigationAndStatusBarForOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    [[UIApplication sharedApplication] setStatusBarOrientation:interfaceOrientation animated:NO];
-}
+//- (void)layoutNavigationAndStatusBarForOrientation:(UIInterfaceOrientation)interfaceOrientation {
+//    [[UIApplication sharedApplication] setStatusBarOrientation:interfaceOrientation animated:NO];
+//}
 
 #pragma mark - Auto hide controls
 
-- (void)setForceRotate:(BOOL)forceRotate {
-    if (_forceRotate != forceRotate) {
-        _forceRotate = forceRotate;
-    }
-    
-    self.view.fullscreenButton.hidden = !self.forceRotate;
-}
+//- (void)setForceRotate:(BOOL)forceRotate {
+//    if (_forceRotate != forceRotate) {
+//        _forceRotate = forceRotate;
+//    }
+//    
+//    self.view.fullscreenButton.hidden = !self.forceRotate;
+//}
 
 - (void)setLoading:(BOOL)loading {
     if (loading) {
@@ -1233,109 +1222,6 @@ typedef enum {
 }
 - (void)setCaptionToTop:(id<VKVideoPlayerCaptionProtocol>)caption playerView:(VKVideoPlayerView*)playerView {
     [self setCaption:caption toCaptionView:playerView.captionTopView playerView:playerView];
-}
-
-#pragma mark - Orientation
-- (void)orientationChanged:(NSNotification *)note {
-    UIDevice * device = note.object;
-    
-    UIInterfaceOrientation rotateToOrientation;
-    switch(device.orientation) {
-        case UIDeviceOrientationPortrait:
-            DDLogVerbose(@"ORIENTATION: Portrait");
-            rotateToOrientation = UIInterfaceOrientationPortrait;
-            break;
-        case UIDeviceOrientationPortraitUpsideDown:
-            DDLogVerbose(@"ORIENTATION: PortraitDown");
-            rotateToOrientation = UIInterfaceOrientationPortraitUpsideDown;
-            break;
-        case UIDeviceOrientationLandscapeLeft:
-            DDLogVerbose(@"ORIENTATION: LandscapeRight");
-            rotateToOrientation = UIInterfaceOrientationLandscapeRight;
-            break;
-        case UIDeviceOrientationLandscapeRight:
-            DDLogVerbose(@"ORIENTATION: LandscapeLeft");
-            rotateToOrientation = UIInterfaceOrientationLandscapeLeft;
-            break;
-        default:
-            rotateToOrientation = self.visibleInterfaceOrientation;
-            break;
-    }
-    
-    if ((1 << rotateToOrientation) & self.supportedOrientations && rotateToOrientation != self.visibleInterfaceOrientation) {
-        [self performOrientationChange:rotateToOrientation];
-    }
-}
-
-- (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation {
-    if (!self.forceRotate) {
-        return;
-    }
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:willChangeOrientationTo:)]) {
-        [self.delegate videoPlayer:self willChangeOrientationTo:deviceOrientation];
-    }
-    
-    CGFloat degrees = [self degreesForOrientation:deviceOrientation];
-    __weak __typeof__(self) weakSelf = self;
-    UIInterfaceOrientation lastOrientation = self.visibleInterfaceOrientation;
-    self.visibleInterfaceOrientation = deviceOrientation;
-    [UIView animateWithDuration:0.3f animations:^{
-        CGRect bounds = [[UIScreen mainScreen] bounds];
-        CGRect parentBounds;
-        CGRect viewBoutnds;
-        if (UIInterfaceOrientationIsLandscape(deviceOrientation)) {
-            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.landscapeFrame), CGRectGetHeight(self.landscapeFrame));
-            parentBounds = CGRectMake(0, 0, CGRectGetHeight(bounds), CGRectGetWidth(bounds));
-        } else {
-            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.portraitFrame), CGRectGetHeight(self.portraitFrame));
-            parentBounds = CGRectMake(0, 0, CGRectGetWidth(bounds), CGRectGetHeight(bounds));
-        }
-        
-        weakSelf.view.superview.transform = CGAffineTransformMakeRotation(degreesToRadians(degrees));
-        weakSelf.view.superview.bounds = parentBounds;
-        [weakSelf.view.superview setFrameOriginX:0.0f];
-        [weakSelf.view.superview setFrameOriginY:0.0f];
-        
-        CGRect wvFrame = weakSelf.view.superview.superview.frame;
-        if (wvFrame.origin.y > 0) {
-            wvFrame.size.height = CGRectGetHeight(bounds) ;
-            wvFrame.origin.y = 0;
-            weakSelf.view.superview.superview.frame = wvFrame;
-        }
-        
-        weakSelf.view.bounds = viewBoutnds;
-        [weakSelf.view setFrameOriginX:0.0f];
-        [weakSelf.view setFrameOriginY:0.0f];
-        [weakSelf.view layoutForOrientation:deviceOrientation];
-        
-    } completion:^(BOOL finished) {
-        if ([self.delegate respondsToSelector:@selector(videoPlayer:didChangeOrientationFrom:)]) {
-            [self.delegate videoPlayer:self didChangeOrientationFrom:lastOrientation];
-        }
-    }];
-    
-//    [[UIApplication sharedApplication] setStatusBarOrientation:self.visibleInterfaceOrientation animated:YES];
-    [self updateCaptionView:self.view.captionBottomView caption:self.captionBottom playerView:self.view];
-    [self updateCaptionView:self.view.captionTopView caption:self.captionTop playerView:self.view];
-    self.view.fullscreenButton.selected = self.isFullScreen = UIInterfaceOrientationIsLandscape(deviceOrientation);
-}
-
-- (CGFloat)degreesForOrientation:(UIInterfaceOrientation)deviceOrientation {
-    switch (deviceOrientation) {
-        case UIInterfaceOrientationUnknown:
-        case UIInterfaceOrientationPortrait:
-            return 0;
-            break;
-        case UIInterfaceOrientationLandscapeRight:
-            return 90;
-            break;
-        case UIInterfaceOrientationLandscapeLeft:
-            return -90;
-            break;
-        case UIInterfaceOrientationPortraitUpsideDown:
-            return 180;
-            break;
-    }
 }
 
 @end

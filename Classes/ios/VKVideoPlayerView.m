@@ -98,11 +98,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     self.playerControlsAutoHideTime = @4.5;
     
-    [self.scrubber setMaximumTrackImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
-    [self.progressBar setThumbImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
-    [self.progressBar setMinimumTrackImage:
-     [[UIImage imageNamed:@"VKScrubber_min"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)]
-                                  forState:UIControlStateNormal];
+//    [self.scrubber setMaximumTrackImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
+//    [self.progressBar setThumbImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
+//    [self.progressBar setMinimumTrackImage:
+//     [[UIImage imageNamed:@"VKScrubber_min"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)]
+//                                  forState:UIControlStateNormal];
     
 }
 
@@ -249,7 +249,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self layoutSlider];
 }
 
-- (void)layoutSliderForOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (void)layoutSliderForOrientation;
+{
     [self.currentTimeLabel setFrameOriginX:PADDING];
     [self.totalTimeLabel setFrameOriginX:CGRectGetWidth(self.bottomControlOverlay.frame) - self.totalTimeLabel.frame.size.width - PADDING];
     [self.scrubber setFrameOriginX:CGRectGetMaxX(self.currentTimeLabel.frame) + PADDING];
@@ -260,7 +261,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 - (void)layoutSlider {
-    [self layoutSliderForOrientation:self.delegate.visibleInterfaceOrientation];
+    [self layoutSliderForOrientation];
 }
 
 - (void)layoutTopControls {
@@ -385,51 +386,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         return NO;
     }
     return YES;
-}
-
-- (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-//        self.topControlOverlay.hidden = YES;
-        self.topPortraitControlOverlay.hidden = NO;
-        
-        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2];
-        self.buttonPlaceHolderView.hidden = YES;
-        
-        self.captionButton.hidden = YES;
-        self.videoQualityButton.hidden = YES;
-        
-        [self.bigPlayButton setFrameOriginY:CGRectGetMinY(self.bottomControlOverlay.frame)/2 - CGRectGetHeight(self.bigPlayButton.frame)/2];
-        
-        for (UIView *control in self.portraitControls) {
-            control.hidden = self.isControlsHidden;
-        }
-        for (UIView *control in self.landscapeControls) {
-            control.hidden = YES;
-        }
-        
-    } else {
-        [self.topControlOverlay setFrameOriginY:0.0f];
-//        self.topControlOverlay.hidden = NO;
-        self.topPortraitControlOverlay.hidden = YES;
-        
-        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2 + CGRectGetMaxY(self.topControlOverlay.frame)];
-        self.buttonPlaceHolderView.hidden = NO;
-        
-        self.captionButton.hidden = NO;
-        self.videoQualityButton.hidden = NO;
-        
-        [self.bigPlayButton setFrameOriginY:(CGRectGetMinY(self.bottomControlOverlay.frame) - CGRectGetMaxY(self.topControlOverlay.frame))/2 + CGRectGetMaxY(self.topControlOverlay.frame) - CGRectGetHeight(self.bigPlayButton.frame)/2];
-        
-        for (UIView *control in self.portraitControls) {
-            control.hidden = YES;
-        }
-        for (UIView *control in self.landscapeControls) {
-            control.hidden = self.isControlsHidden;
-        }
-    }
-    
-    [self layoutTopControls];
-    [self layoutSliderForOrientation:interfaceOrientation];
 }
 
 - (void)addSubviewForControl:(UIView *)view {

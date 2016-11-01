@@ -6,7 +6,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "VKScrubber.h"
-//#import "VKButtonPanel.h"
 #import "VKPickerButton.h"
 #import "VKView.h"
 #import "VKVideoPlayerConfig.h"
@@ -18,7 +17,6 @@
 
 @protocol VKVideoPlayerViewDelegate <VKScrubberDelegate>
 @property (nonatomic, readonly) VKVideoPlayerTrack* videoTrack;
-@property (nonatomic, readonly) UIInterfaceOrientation visibleInterfaceOrientation;
 - (void)fullScreenButtonTapped;
 - (void)playButtonPressed;
 - (void)pauseButtonPressed;
@@ -120,7 +118,7 @@
 - (void)setPlayButtonsSelected:(BOOL)selected;
 - (void)setPlayButtonsEnabled:(BOOL)enabled;
 
-- (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation;
+//- (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation;
 - (void)addSubviewForControl:(UIView *)view;
 - (void)addSubviewForControl:(UIView *)view toView:(UIView*)parentView;
 - (void)addSubviewForControl:(UIView *)view toView:(UIView*)parentView forOrientation:(UIInterfaceOrientationMask)orientation;
