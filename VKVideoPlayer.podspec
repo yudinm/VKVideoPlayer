@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
     "Keisuke Matsuo" => "matzo@viki.com" 
   }
 
-  s.platform     = :ios, "5.0"
-  s.ios.deployment_target = '5.0'
-  s.source       = { :git => "http://git.mebobeijing.com:3000/vince.wang/VKVideoPlayer.git" }
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = '8.0'
+  s.source       = { :git => "https://github.com/yudinm/VKVideoPlayer.git" }
 
   s.source_files = 'Classes/ios/*.{h,m}'
 
@@ -44,6 +44,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'DTCoreText', '~> 1.6.11'
   s.dependency 'CocoaLumberjack', '~> 1.7.0'
-  s.dependency 'VKFoundation', :git => 'http://git.mebobeijing.com:3000/vince.wang/VKFoundation.git'
+  s.dependency 'VKFoundation', :git => 'https://github.com/yudinm/VKFoundation.git'
 
 end
