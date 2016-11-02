@@ -2,7 +2,7 @@ platform :ios, '5.1.1'
 pod 'DTCoreText', '~> 1.6.11'
 pod 'AFNetworking', '1.3.3'
 pod 'CocoaLumberjack', '~> 1.7.0'
-pod 'VKFoundation', :git => 'http://git.mebobeijing.com:3000/vince.wang/VKFoundation.git'
+pod 'VKFoundation', :git => 'https://github.com/yudinm/VKFoundation.git'
 pod 'CocoaHTTPServer'
 
 target 'VKVideoPlayer' do
