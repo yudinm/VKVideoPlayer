@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = '8.0'
-  s.source       = { :git => "https://github.com/yudinm/VKVideoPlayer.git", :tag => 'custom-ui' }
+  s.source       = { :git => "https://github.com/yudinm/VKVideoPlayer.git" }
 
   s.source_files = 'Classes/ios/*.{h,m}'
 
