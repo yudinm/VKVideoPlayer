@@ -22,26 +22,6 @@
 		1B53AC3D1916732200E1B484 /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53AC3C1916732200E1B484 /* DemoHTTPStreamingServer.m */; };
 		1B53AC3E1916732200E1B484 /* DemoHTTPStreamingServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53AC3C1916732200E1B484 /* DemoHTTPStreamingServer.m */; };
 		1BA61F9718FCCB6D000DDB94 /* DemoVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61F9618FCCB6D000DDB94 /* DemoVideoPlayerViewController.m */; };
-		1BA61FC418FD231D000DDB94 /* VKVideoPlayer_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB018FD231C000DDB94 /* VKVideoPlayer_close.png */; };
-		1BA61FC518FD231D000DDB94 /* VKVideoPlayer_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB118FD231C000DDB94 /* VKVideoPlayer_close@2x.png */; };
-		1BA61FC618FD231D000DDB94 /* VKVideoPlayer_cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB218FD231D000DDB94 /* VKVideoPlayer_cross.png */; };
-		1BA61FC718FD231D000DDB94 /* VKVideoPlayer_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB318FD231D000DDB94 /* VKVideoPlayer_cross@2x.png */; };
-		1BA61FC818FD231D000DDB94 /* VKVideoPlayer_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB418FD231D000DDB94 /* VKVideoPlayer_next.png */; };
-		1BA61FC918FD231D000DDB94 /* VKVideoPlayer_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB518FD231D000DDB94 /* VKVideoPlayer_next@2x.png */; };
-		1BA61FCA18FD231D000DDB94 /* VKVideoPlayer_pause_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB618FD231D000DDB94 /* VKVideoPlayer_pause_big.png */; };
-		1BA61FCB18FD231D000DDB94 /* VKVideoPlayer_pause_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB718FD231D000DDB94 /* VKVideoPlayer_pause_big@2x.png */; };
-		1BA61FCC18FD231D000DDB94 /* VKVideoPlayer_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB818FD231D000DDB94 /* VKVideoPlayer_pause.png */; };
-		1BA61FCD18FD231D000DDB94 /* VKVideoPlayer_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FB918FD231D000DDB94 /* VKVideoPlayer_pause@2x.png */; };
-		1BA61FCE18FD231D000DDB94 /* VKVideoPlayer_play_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBA18FD231D000DDB94 /* VKVideoPlayer_play_big.png */; };
-		1BA61FCF18FD231D000DDB94 /* VKVideoPlayer_play_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBB18FD231D000DDB94 /* VKVideoPlayer_play_big@2x.png */; };
-		1BA61FD018FD231D000DDB94 /* VKVideoPlayer_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBC18FD231D000DDB94 /* VKVideoPlayer_play.png */; };
-		1BA61FD118FD231D000DDB94 /* VKVideoPlayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBD18FD231D000DDB94 /* VKVideoPlayer_play@2x.png */; };
-		1BA61FD218FD231D000DDB94 /* VKVideoPlayer_rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBE18FD231D000DDB94 /* VKVideoPlayer_rewind.png */; };
-		1BA61FD318FD231D000DDB94 /* VKVideoPlayer_rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FBF18FD231D000DDB94 /* VKVideoPlayer_rewind@2x.png */; };
-		1BA61FD418FD231D000DDB94 /* VKVideoPlayer_zoom_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FC018FD231D000DDB94 /* VKVideoPlayer_zoom_in.png */; };
-		1BA61FD518FD231D000DDB94 /* VKVideoPlayer_zoom_in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FC118FD231D000DDB94 /* VKVideoPlayer_zoom_in@2x.png */; };
-		1BA61FD618FD231D000DDB94 /* VKVideoPlayer_zoom_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FC218FD231D000DDB94 /* VKVideoPlayer_zoom_out.png */; };
-		1BA61FD718FD231D000DDB94 /* VKVideoPlayer_zoom_out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61FC318FD231D000DDB94 /* VKVideoPlayer_zoom_out@2x.png */; };
 		1BB6ADBB18EE626A00767FA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB6ADBA18EE626A00767FA3 /* Foundation.framework */; };
 		1BB6ADBD18EE626A00767FA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB6ADBC18EE626A00767FA3 /* CoreGraphics.framework */; };
 		1BB6ADBF18EE626A00767FA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB6ADBE18EE626A00767FA3 /* UIKit.framework */; };
@@ -66,11 +46,10 @@
 		1BB9D35918FBFEF300568286 /* testCaptionTop.srt in Resources */ = {isa = PBXBuildFile; fileRef = 1BB9D35818FBFEF300568286 /* testCaptionTop.srt */; };
 		1BB9D35A18FBFEF400568286 /* testCaptionTop.srt in Resources */ = {isa = PBXBuildFile; fileRef = 1BB9D35818FBFEF300568286 /* testCaptionTop.srt */; };
 		1BF1CCDB1903A8660006FBC8 /* DemoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1CCDA1903A8660006FBC8 /* DemoRootViewController.m */; };
+		5E924E391DCB518100DC5309 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E924E381DCB518100DC5309 /* Resources.xcassets */; };
 		5F65023E024A64C85442C785 /* libPods-VKVideoPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E8FE14882386810FA41435 /* libPods-VKVideoPlayer.a */; };
 		605176501D783DBA004055D1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6051764F1D783DBA004055D1 /* Launch Screen.storyboard */; };
 		605176521D783F24004055D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605176511D783F24004055D1 /* Main.storyboard */; };
-		60DDB80F1D7876950095086C /* VKVideoPlayer_replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DDB80D1D7876950095086C /* VKVideoPlayer_replay.png */; };
-		60DDB8101D7876950095086C /* VKVideoPlayer_replay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DDB80E1D7876950095086C /* VKVideoPlayer_replay@2x.png */; };
 		F3E900D01B2823910057C484 /* SampleVideo_640x360_1mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F3E900CF1B2823890057C484 /* SampleVideo_640x360_1mb.mp4 */; };
 /* End PBXBuildFile section */
 
@@ -107,26 +86,6 @@
 		1B53AC3C1916732200E1B484 /* DemoHTTPStreamingServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoHTTPStreamingServer.m; sourceTree = "<group>"; };
 		1BA61F9518FCCB6D000DDB94 /* DemoVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVideoPlayerViewController.h; sourceTree = "<group>"; };
 		1BA61F9618FCCB6D000DDB94 /* DemoVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVideoPlayerViewController.m; sourceTree = "<group>"; };
-		1BA61FB018FD231C000DDB94 /* VKVideoPlayer_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_close.png; path = Assets/VKVideoPlayer_close.png; sourceTree = SOURCE_ROOT; };
-		1BA61FB118FD231C000DDB94 /* VKVideoPlayer_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_close@2x.png"; path = "Assets/VKVideoPlayer_close@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FB218FD231D000DDB94 /* VKVideoPlayer_cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_cross.png; path = Assets/VKVideoPlayer_cross.png; sourceTree = SOURCE_ROOT; };
-		1BA61FB318FD231D000DDB94 /* VKVideoPlayer_cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_cross@2x.png"; path = "Assets/VKVideoPlayer_cross@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FB418FD231D000DDB94 /* VKVideoPlayer_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_next.png; path = Assets/VKVideoPlayer_next.png; sourceTree = SOURCE_ROOT; };
-		1BA61FB518FD231D000DDB94 /* VKVideoPlayer_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_next@2x.png"; path = "Assets/VKVideoPlayer_next@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FB618FD231D000DDB94 /* VKVideoPlayer_pause_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_pause_big.png; path = Assets/VKVideoPlayer_pause_big.png; sourceTree = SOURCE_ROOT; };
-		1BA61FB718FD231D000DDB94 /* VKVideoPlayer_pause_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_pause_big@2x.png"; path = "Assets/VKVideoPlayer_pause_big@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FB818FD231D000DDB94 /* VKVideoPlayer_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_pause.png; path = Assets/VKVideoPlayer_pause.png; sourceTree = SOURCE_ROOT; };
-		1BA61FB918FD231D000DDB94 /* VKVideoPlayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_pause@2x.png"; path = "Assets/VKVideoPlayer_pause@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FBA18FD231D000DDB94 /* VKVideoPlayer_play_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_play_big.png; path = Assets/VKVideoPlayer_play_big.png; sourceTree = SOURCE_ROOT; };
-		1BA61FBB18FD231D000DDB94 /* VKVideoPlayer_play_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_play_big@2x.png"; path = "Assets/VKVideoPlayer_play_big@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FBC18FD231D000DDB94 /* VKVideoPlayer_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_play.png; path = Assets/VKVideoPlayer_play.png; sourceTree = SOURCE_ROOT; };
-		1BA61FBD18FD231D000DDB94 /* VKVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_play@2x.png"; path = "Assets/VKVideoPlayer_play@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FBE18FD231D000DDB94 /* VKVideoPlayer_rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_rewind.png; path = Assets/VKVideoPlayer_rewind.png; sourceTree = SOURCE_ROOT; };
-		1BA61FBF18FD231D000DDB94 /* VKVideoPlayer_rewind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_rewind@2x.png"; path = "Assets/VKVideoPlayer_rewind@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FC018FD231D000DDB94 /* VKVideoPlayer_zoom_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_zoom_in.png; path = Assets/VKVideoPlayer_zoom_in.png; sourceTree = SOURCE_ROOT; };
-		1BA61FC118FD231D000DDB94 /* VKVideoPlayer_zoom_in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_zoom_in@2x.png"; path = "Assets/VKVideoPlayer_zoom_in@2x.png"; sourceTree = SOURCE_ROOT; };
-		1BA61FC218FD231D000DDB94 /* VKVideoPlayer_zoom_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VKVideoPlayer_zoom_out.png; path = Assets/VKVideoPlayer_zoom_out.png; sourceTree = SOURCE_ROOT; };
-		1BA61FC318FD231D000DDB94 /* VKVideoPlayer_zoom_out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VKVideoPlayer_zoom_out@2x.png"; path = "Assets/VKVideoPlayer_zoom_out@2x.png"; sourceTree = SOURCE_ROOT; };
 		1BB6ADB718EE626A00767FA3 /* VKVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB6ADBA18EE626A00767FA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BB6ADBC18EE626A00767FA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,10 +119,9 @@
 		1BF1CCD91903A8660006FBC8 /* DemoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoRootViewController.h; sourceTree = "<group>"; };
 		1BF1CCDA1903A8660006FBC8 /* DemoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoRootViewController.m; sourceTree = "<group>"; };
 		2EE9957279B5D1D90CE02251 /* Pods-VKVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKVideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKVideoPlayer/Pods-VKVideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		5E924E381DCB518100DC5309 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
 		6051764F1D783DBA004055D1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		605176511D783F24004055D1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		60DDB80D1D7876950095086C /* VKVideoPlayer_replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_replay.png; sourceTree = "<group>"; };
-		60DDB80E1D7876950095086C /* VKVideoPlayer_replay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_replay@2x.png"; sourceTree = "<group>"; };
 		68E8FE14882386810FA41435 /* libPods-VKVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7292642FD2A4B4C34885E28D /* Pods-VKVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKVideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKVideoPlayer/Pods-VKVideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		F3E900CF1B2823890057C484 /* SampleVideo_640x360_1mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo_640x360_1mb.mp4; sourceTree = "<group>"; };
@@ -348,28 +306,7 @@
 		1BB6ADF618EE66CD00767FA3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				1BA61FB018FD231C000DDB94 /* VKVideoPlayer_close.png */,
-				1BA61FB118FD231C000DDB94 /* VKVideoPlayer_close@2x.png */,
-				1BA61FB218FD231D000DDB94 /* VKVideoPlayer_cross.png */,
-				1BA61FB318FD231D000DDB94 /* VKVideoPlayer_cross@2x.png */,
-				1BA61FB418FD231D000DDB94 /* VKVideoPlayer_next.png */,
-				1BA61FB518FD231D000DDB94 /* VKVideoPlayer_next@2x.png */,
-				1BA61FB618FD231D000DDB94 /* VKVideoPlayer_pause_big.png */,
-				1BA61FB718FD231D000DDB94 /* VKVideoPlayer_pause_big@2x.png */,
-				1BA61FB818FD231D000DDB94 /* VKVideoPlayer_pause.png */,
-				1BA61FB918FD231D000DDB94 /* VKVideoPlayer_pause@2x.png */,
-				1BA61FBA18FD231D000DDB94 /* VKVideoPlayer_play_big.png */,
-				1BA61FBB18FD231D000DDB94 /* VKVideoPlayer_play_big@2x.png */,
-				1BA61FBC18FD231D000DDB94 /* VKVideoPlayer_play.png */,
-				1BA61FBD18FD231D000DDB94 /* VKVideoPlayer_play@2x.png */,
-				60DDB80D1D7876950095086C /* VKVideoPlayer_replay.png */,
-				60DDB80E1D7876950095086C /* VKVideoPlayer_replay@2x.png */,
-				1BA61FBE18FD231D000DDB94 /* VKVideoPlayer_rewind.png */,
-				1BA61FBF18FD231D000DDB94 /* VKVideoPlayer_rewind@2x.png */,
-				1BA61FC018FD231D000DDB94 /* VKVideoPlayer_zoom_in.png */,
-				1BA61FC118FD231D000DDB94 /* VKVideoPlayer_zoom_in@2x.png */,
-				1BA61FC218FD231D000DDB94 /* VKVideoPlayer_zoom_out.png */,
-				1BA61FC318FD231D000DDB94 /* VKVideoPlayer_zoom_out@2x.png */,
+				5E924E381DCB518100DC5309 /* Resources.xcassets */,
 			);
 			name = Assets;
 			path = VKVideoPlayer;
@@ -504,40 +441,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA61FC618FD231D000DDB94 /* VKVideoPlayer_cross.png in Resources */,
 				1BB6ADC518EE626A00767FA3 /* InfoPlist.strings in Resources */,
-				1BA61FCF18FD231D000DDB94 /* VKVideoPlayer_play_big@2x.png in Resources */,
-				1BA61FD418FD231D000DDB94 /* VKVideoPlayer_zoom_in.png in Resources */,
-				1BA61FC918FD231D000DDB94 /* VKVideoPlayer_next@2x.png in Resources */,
 				1BB9D35218FA4A2B00568286 /* VKVideoPlayerViewController~iphone.xib in Resources */,
 				605176501D783DBA004055D1 /* Launch Screen.storyboard in Resources */,
 				1BB6ADF118EE66B000767FA3 /* VKVideoPlayerView.xib in Resources */,
-				60DDB8101D7876950095086C /* VKVideoPlayer_replay@2x.png in Resources */,
-				1BA61FCA18FD231D000DDB94 /* VKVideoPlayer_pause_big.png in Resources */,
-				1BA61FD518FD231D000DDB94 /* VKVideoPlayer_zoom_in@2x.png in Resources */,
-				1BA61FC818FD231D000DDB94 /* VKVideoPlayer_next.png in Resources */,
-				1BA61FC518FD231D000DDB94 /* VKVideoPlayer_close@2x.png in Resources */,
 				1B2060311904257500E11467 /* Japanese.srt in Resources */,
 				F3E900D01B2823910057C484 /* SampleVideo_640x360_1mb.mp4 in Resources */,
-				1BA61FCB18FD231D000DDB94 /* VKVideoPlayer_pause_big@2x.png in Resources */,
-				1BA61FCD18FD231D000DDB94 /* VKVideoPlayer_pause@2x.png in Resources */,
-				1BA61FD018FD231D000DDB94 /* VKVideoPlayer_play.png in Resources */,
 				1B53AC3A19166FE700E1B484 /* web in Resources */,
 				1BB9D35918FBFEF300568286 /* testCaptionTop.srt in Resources */,
-				1BA61FC418FD231D000DDB94 /* VKVideoPlayer_close.png in Resources */,
 				1BB9D35118FA4A2B00568286 /* VKVideoPlayerViewController~ipad.xib in Resources */,
 				1B2060321904257700E11467 /* English.srt in Resources */,
-				1BA61FCC18FD231D000DDB94 /* VKVideoPlayer_pause.png in Resources */,
-				1BA61FC718FD231D000DDB94 /* VKVideoPlayer_cross@2x.png in Resources */,
-				1BA61FD118FD231D000DDB94 /* VKVideoPlayer_play@2x.png in Resources */,
-				1BA61FD218FD231D000DDB94 /* VKVideoPlayer_rewind.png in Resources */,
-				1BA61FD318FD231D000DDB94 /* VKVideoPlayer_rewind@2x.png in Resources */,
 				605176521D783F24004055D1 /* Main.storyboard in Resources */,
 				1BB6ADCD18EE626A00767FA3 /* Images.xcassets in Resources */,
-				1BA61FD618FD231D000DDB94 /* VKVideoPlayer_zoom_out.png in Resources */,
-				60DDB80F1D7876950095086C /* VKVideoPlayer_replay.png in Resources */,
-				1BA61FCE18FD231D000DDB94 /* VKVideoPlayer_play_big.png in Resources */,
-				1BA61FD718FD231D000DDB94 /* VKVideoPlayer_zoom_out@2x.png in Resources */,
+				5E924E391DCB518100DC5309 /* Resources.xcassets in Resources */,
 				1BB9D35718FBE64E00568286 /* testCaptionBottom.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

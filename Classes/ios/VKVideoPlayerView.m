@@ -180,7 +180,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self.delegate doneButtonTapped];
 }
 
-
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self.scrubber) {
         if ([keyPath isEqualToString:@"maximumValue"]) {
@@ -191,12 +190,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         }
     }
     
-    if ([object isKindOfClass:[UIButton class]]) {
-        UIButton* button = object;
-        if ([button isDescendantOfView:self.topControlOverlay]) {
-            [self layoutTopControls];
-        }
-    }
+    //    if ([object isKindOfClass:[UIButton class]]) {
+    //        UIButton* button = object;
+    //        if ([button isDescendantOfView:self.topControlOverlay]) {
+    ////            [self layoutTopControls];
+    //        }
+    //    }
 }
 
 - (void)setDelegate:(id<VKVideoPlayerViewDelegate>)delegate {
@@ -246,35 +245,35 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self.totalTimeLabel sizeToFit];
     [self.totalTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
     
-    [self layoutSlider];
+    //    [self layoutSlider];
 }
 
-- (void)layoutSliderForOrientation;
-{
-    [self.currentTimeLabel setFrameOriginX:PADDING];
-    [self.totalTimeLabel setFrameOriginX:CGRectGetWidth(self.bottomControlOverlay.frame) - self.totalTimeLabel.frame.size.width - PADDING];
-    [self.scrubber setFrameOriginX:CGRectGetMaxX(self.currentTimeLabel.frame) + PADDING];
-    [self.scrubber setFrameWidth:CGRectGetMinX(self.totalTimeLabel.frame) - PADDING * 2 - CGRectGetMaxX(self.currentTimeLabel.frame)];
-    [self.scrubber setFrameOriginY:CGRectGetHeight(self.bottomControlOverlay.frame)/2 - CGRectGetHeight(self.scrubber.frame)/2];
-    
-    [self.progressBar setFrame:self.scrubber.frame];
-}
+//- (void)layoutSliderForOrientation;
+//{
+//    [self.currentTimeLabel setFrameOriginX:PADDING];
+//    [self.totalTimeLabel setFrameOriginX:CGRectGetWidth(self.bottomControlOverlay.frame) - self.totalTimeLabel.frame.size.width - PADDING];
+//    [self.scrubber setFrameOriginX:CGRectGetMaxX(self.currentTimeLabel.frame) + PADDING];
+//    [self.scrubber setFrameWidth:CGRectGetMinX(self.totalTimeLabel.frame) - PADDING * 2 - CGRectGetMaxX(self.currentTimeLabel.frame)];
+//    [self.scrubber setFrameOriginY:CGRectGetHeight(self.bottomControlOverlay.frame)/2 - CGRectGetHeight(self.scrubber.frame)/2];
 
-- (void)layoutSlider {
-    [self layoutSliderForOrientation];
-}
+//    [self.progressBar setFrame:self.scrubber.frame];
+//}
 
-- (void)layoutTopControls {
-    
-    //    CGFloat rightMargin = CGRectGetMaxX(self.topControlOverlay.frame);
-    //    for (UIView* button in self.topControlOverlay.subviews) {
-    //        if ([button isKindOfClass:[UIButton class]] && button != self.doneButton && !button.hidden) {
-    //            rightMargin = MIN(CGRectGetMinX(button.frame), rightMargin);
-    //        }
-    //    }
-    
-    //    [self.titleLabel setFrameWidth:rightMargin - CGRectGetMinX(self.titleLabel.frame) - 20];
-}
+//- (void)layoutSlider {
+//    [self layoutSliderForOrientation];
+//}
+
+//- (void)layoutTopControls {
+
+//    CGFloat rightMargin = CGRectGetMaxX(self.topControlOverlay.frame);
+//    for (UIView* button in self.topControlOverlay.subviews) {
+//        if ([button isKindOfClass:[UIButton class]] && button != self.doneButton && !button.hidden) {
+//            rightMargin = MIN(CGRectGetMinX(button.frame), rightMargin);
+//        }
+//    }
+
+//    [self.titleLabel setFrameWidth:rightMargin - CGRectGetMinX(self.titleLabel.frame) - 20];
+//}
 
 - (void)setPlayButtonsSelected:(BOOL)selected {
     self.playButton.selected = selected;
@@ -376,7 +375,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         
     }
     
-    [self layoutTopControls];
+    //    [self layoutTopControls];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
