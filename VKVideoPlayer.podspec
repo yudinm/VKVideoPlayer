@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.osx.exclude_files = 'Classes/ios'
   s.public_header_files = 'Classes/**/*.h'
 
-  s.resources = 'Resources.xcassets/*' , 'Classes/ios/*.{xib}'
+  s.resources = 'VKVideoPlayer/**/*.xcassets' , 'Classes/ios/*.{xib}'
   
   s.frameworks = 'QuartzCore', 'MediaPlayer', 'AVFoundation'
 
