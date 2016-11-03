@@ -74,7 +74,7 @@ typedef enum {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     Class vcClass = NSClassFromString(cell.textLabel.text);
     UIViewController *viewController = [[vcClass alloc] init];
-    
+    viewController.view.tintColor = self.view.tintColor;
     [self presentViewController:viewController animated:YES completion:^{
         
     }];

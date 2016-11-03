@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "VKVideoPlayer"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "VKVideoPlayer is customizable video player component that is able to play mp4, hls videos and display subtitles."
 
   s.description  = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
     "Keisuke Matsuo" => "matzo@viki.com" 
   }
 
-  s.platform     = :ios, "5.0"
-  s.ios.deployment_target = '5.0'
-  s.source       = { :git => "http://git.mebobeijing.com:3000/vince.wang/VKVideoPlayer.git" }
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = '8.0'
+  s.source       = { :git => "https://github.com/yudinm/VKVideoPlayer.git" }
 
   s.source_files = 'Classes/ios/*.{h,m}'
 
@@ -36,14 +36,14 @@ Pod::Spec.new do |s|
   s.osx.exclude_files = 'Classes/ios'
   s.public_header_files = 'Classes/**/*.h'
 
-  s.resources = 'Assets/*.png' , 'Classes/ios/*.{xib}'
+  s.resources = '**/*.xcassets' , 'Classes/ios/*.{xib}'
   
   s.frameworks = 'QuartzCore', 'MediaPlayer', 'AVFoundation'
 
   s.requires_arc = true
 
-  s.dependency 'DTCoreText', '~> 1.6.11'
-  s.dependency 'CocoaLumberjack', '~> 1.7.0'
-  s.dependency 'VKFoundation', :git => 'http://git.mebobeijing.com:3000/vince.wang/VKFoundation.git'
+  s.dependency 'DTCoreText'
+  s.dependency 'CocoaLumberjack'
+#  s.dependency 'VKFoundation'
 
 end

@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VKVideoPlayerView">
             <connections>
-                <outlet property="activityIndicator" destination="54" id="55"/>
-                <outlet property="bottomControlOverlay" destination="3" id="87"/>
-                <outlet property="buttonPlaceHolderView" destination="92" id="5qL-9Y-6gV"/>
-                <outlet property="captionBottomView" destination="59" id="66"/>
-                <outlet property="captionTopContainerView" destination="62" id="65"/>
-                <outlet property="captionTopView" destination="63" id="67"/>
-                <outlet property="controls" destination="31" id="34"/>
-                <outlet property="currentTimeLabel" destination="83" id="85"/>
-                <outlet property="doneButton" destination="LWl-fl-KpR" id="gkB-cY-P4X"/>
-                <outlet property="externalDeviceImageView" destination="103" id="106"/>
-                <outlet property="externalDeviceLabel" destination="105" id="107"/>
-                <outlet property="externalDeviceView" destination="104" id="108"/>
-                <outlet property="messageLabel" destination="61" id="64"/>
-                <outlet property="playButton" destination="17" id="25"/>
-                <outlet property="playerLayerView" destination="56" id="58"/>
-                <outlet property="progressBar" destination="Cpr-9x-8HU" id="GRk-4q-CdV"/>
-                <outlet property="replayButton" destination="aqz-Wk-un4" id="pgC-CW-OXu"/>
-                <outlet property="scrubber" destination="18" id="26"/>
-                <outlet property="titleLabel" destination="89" id="90"/>
-                <outlet property="topControlOverlay" destination="32" id="33"/>
-                <outlet property="topPortraitCloseButton" destination="lRL-G6-RP6" id="eY8-PJ-tB8"/>
-                <outlet property="topPortraitControlOverlay" destination="xtv-gf-Qvy" id="fYr-au-b2L"/>
-                <outlet property="totalTimeLabel" destination="19" id="82"/>
-                <outlet property="videoQualityButton" destination="43" id="44"/>
-                <outlet property="view" destination="1" id="22"/>
+                <outlet property="activityIndicator" destination="XCB-Zy-t8P" id="PhZ-1b-YWJ"/>
+                <outlet property="btFullscreen" destination="9NI-r6-2yb" id="Zel-cc-GwY"/>
+                <outlet property="currentTimeLabel" destination="mlt-5u-Wdp" id="I9N-zr-vDr"/>
+                <outlet property="doneButton" destination="F7P-eL-OgW" id="JtP-Xv-rCJ"/>
+                <outlet property="fullscreenButton" destination="9NI-r6-2yb" id="zCI-Xo-jyO"/>
+                <outlet property="playButton" destination="4N6-e8-K6s" id="DnV-XK-awe"/>
+                <outlet property="playerLayerView" destination="cfn-hW-WG7" id="6xW-4T-Gbm"/>
+                <outlet property="playerShadow" destination="wWM-Di-1im" id="yYI-kK-hMt"/>
+                <outlet property="progressBar" destination="zNh-O5-BSd" id="yHF-MS-7VB"/>
+                <outlet property="replayButton" destination="BoR-hg-NBJ" id="bgy-dB-zgY"/>
+                <outlet property="scrubber" destination="RwN-bq-5ht" id="DTk-5C-i3L"/>
+                <outlet property="titleLabel" destination="FrW-rf-VHB" id="mrx-hb-zXq"/>
+                <outlet property="totalTimeLabel" destination="DnR-VJ-0Jd" id="mLQ-pa-ady"/>
+                <outlet property="view" destination="2CX-aN-Fwe" id="2hy-ar-Lyh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -44,216 +34,6 @@
                 <outlet property="delegate" destination="-1" id="81"/>
             </connections>
         </tapGestureRecognizer>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="56" customClass="VKVideoPlayerLayerView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    <gestureRecognizers/>
-                </view>
-                <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1112" contentMode="scaleToFill" id="59" customClass="DTAttributedLabel">
-                    <rect key="frame" x="20" y="120" width="280" height="40"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" notEnabled="YES"/>
-                        <bool key="isElement" value="YES"/>
-                    </accessibility>
-                </view>
-                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="61" userLabel="Label - This is an advertisement. Your video will resume shortly.">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <string key="text">This is an advertisement.
-Your video will resume shortly.</string>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="62">
-                    <rect key="frame" x="13" y="0.0" width="293" height="110"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1111" contentMode="scaleToFill" id="63" customClass="DTAttributedLabel">
-                            <rect key="frame" x="0.0" y="10" width="293" height="43"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                </view>
-                <view hidden="YES" contentMode="scaleToFill" id="104">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="103">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="105">
-                            <rect key="frame" x="20" y="105" width="280" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <size key="shadowOffset" width="1" height="1"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                </view>
-                <view contentMode="scaleToFill" id="31">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" id="92" userLabel="Button Panel">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                        <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="xtv-gf-Qvy">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lRL-G6-RP6">
-                                    <rect key="frame" x="6" y="6" width="40" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="VKVideoPlayer_cross.png">
-                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="32">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="89">
-                                    <rect key="frame" x="44" y="0.0" width="216" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LWl-fl-KpR">
-                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <state key="normal" title="Done">
-                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="llE-GB-LQt"/>
-                                    </connections>
-                                </button>
-                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="43" customClass="VKPickerButton">
-                                    <rect key="frame" x="261" y="0.0" width="44" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                    <state key="normal" title="AUTO">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <state key="disabled" title="AUTO">
-                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <state key="highlighted">
-                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="videoQualityButtonTapped:" destination="-1" eventType="touchUpInside" id="101"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="3">
-                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="19">
-                                    <rect key="frame" x="280" y="0.0" width="40" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83">
-                                    <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="1" id="Cpr-9x-8HU" customClass="VKScrubber">
-                                    <rect key="frame" x="46" y="8" width="228" height="29"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </slider>
-                                <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" id="18" customClass="VKScrubber">
-                                    <rect key="frame" x="46" y="8" width="228" height="29"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </slider>
-                            </subviews>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="17">
-                            <rect key="frame" x="138" y="68" width="44" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" image="VKVideoPlayer_pause.png">
-                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <state key="selected" image="VKVideoPlayer_play.png"/>
-                            <state key="highlighted">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="30"/>
-                            </connections>
-                        </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aqz-Wk-un4">
-                            <rect key="frame" x="138" y="68" width="44" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" image="VKVideoPlayer_replay.png">
-                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <state key="highlighted">
-                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="S1u-Ed-0LM"/>
-                                <action selector="replayButtonTapped:" destination="-1" eventType="touchUpInside" id="TOi-A2-abR"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    <gestureRecognizers/>
-                </view>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="54">
-                    <rect key="frame" x="141" y="71" width="37" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <gestureRecognizers/>
-                </activityIndicatorView>
-            </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <gestureRecognizers/>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="49" appends="YES" id="78"/>
-                <outletCollection property="gestureRecognizers" destination="rJu-g6-2JN" appends="YES" id="qgs-d1-IVP"/>
-                <outletCollection property="gestureRecognizers" destination="JnZ-7A-Kfb" appends="YES" id="zRV-VY-YKk"/>
-            </connections>
-        </view>
         <swipeGestureRecognizer direction="left" id="rJu-g6-2JN" userLabel="Swipe Left">
             <connections>
                 <action selector="handleSwipeLeft:" destination="-1" id="2B6-3u-Ol8"/>
@@ -266,16 +46,280 @@ Your video will resume shortly.</string>
                 <outlet property="delegate" destination="-1" id="rBE-hv-VYG"/>
             </connections>
         </swipeGestureRecognizer>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="2CX-aN-Fwe">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfn-hW-WG7" customClass="VKVideoPlayerLayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                </view>
+                <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1112" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-CS-0RS" customClass="DTAttributedLabel">
+                    <rect key="frame" x="20" y="120" width="280" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ovr-TF-HJS"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkg-op-mFC" userLabel="Label - This is an advertisement. Your video will resume shortly.">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">This is an advertisement.
+Your video will resume shortly.</string>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKL-lR-el3">
+                    <rect key="frame" x="13" y="0.0" width="293" height="110"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view clipsSubviews="YES" userInteractionEnabled="NO" tag="1111" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kd7-aC-FP0" customClass="DTAttributedLabel">
+                            <rect key="frame" x="0.0" y="10" width="293" height="43"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roo-bx-IJc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWM-Di-1im">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C9-rn-fxJ">
+                            <rect key="frame" x="20" y="105" width="280" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="8zo-Eb-5S2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <size key="shadowOffset" width="1" height="1"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="6C9-rn-fxJ" firstAttribute="leading" secondItem="roo-bx-IJc" secondAttribute="leading" constant="20" id="4hd-bs-hTn"/>
+                        <constraint firstItem="wWM-Di-1im" firstAttribute="top" secondItem="roo-bx-IJc" secondAttribute="top" id="Bdn-v2-YK7"/>
+                        <constraint firstItem="wWM-Di-1im" firstAttribute="leading" secondItem="roo-bx-IJc" secondAttribute="leading" id="Hj1-N0-VHc"/>
+                        <constraint firstAttribute="bottom" secondItem="6C9-rn-fxJ" secondAttribute="bottom" constant="54" id="Hnr-HY-p1x"/>
+                        <constraint firstAttribute="trailing" secondItem="wWM-Di-1im" secondAttribute="trailing" id="lYg-Uj-FBH"/>
+                        <constraint firstAttribute="trailing" secondItem="6C9-rn-fxJ" secondAttribute="trailing" constant="20" id="trZ-ml-TKs"/>
+                        <constraint firstAttribute="bottom" secondItem="wWM-Di-1im" secondAttribute="bottom" id="uSW-s9-HKq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6y2-ka-Z3P">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFW-Z8-upB" userLabel="Button Panel">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6M-sf-hVO">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrW-rf-VHB">
+                                    <rect key="frame" x="44" y="0.0" width="216" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7P-eL-OgW">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="I2L-G3-ztj"/>
+                                        <constraint firstAttribute="height" constant="44" id="Nb6-Lo-N7Y"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" image="VKVideoPlayer_close">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="FrW-rf-VHB" firstAttribute="top" secondItem="E6M-sf-hVO" secondAttribute="top" id="3qq-XA-LlW"/>
+                                <constraint firstItem="FrW-rf-VHB" firstAttribute="leading" secondItem="F7P-eL-OgW" secondAttribute="trailing" id="7th-5S-yq3"/>
+                                <constraint firstAttribute="trailing" secondItem="FrW-rf-VHB" secondAttribute="trailing" constant="60" id="FHj-gT-KDX"/>
+                                <constraint firstAttribute="bottom" secondItem="FrW-rf-VHB" secondAttribute="bottom" id="MQH-7X-AhU"/>
+                                <constraint firstAttribute="height" constant="44" id="O4X-vO-aDB"/>
+                                <constraint firstItem="F7P-eL-OgW" firstAttribute="top" secondItem="E6M-sf-hVO" secondAttribute="top" id="d6s-qL-wJv"/>
+                                <constraint firstItem="F7P-eL-OgW" firstAttribute="leading" secondItem="E6M-sf-hVO" secondAttribute="leading" id="wGF-wT-jWm"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpb-xw-dlb">
+                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnR-VJ-0Jd">
+                                    <rect key="frame" x="250" y="0.0" width="32" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="D7p-Az-85t"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-5u-Wdp">
+                                    <rect key="frame" x="8" y="0.0" width="32" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="Y2d-Be-YzO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000596046448" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zNh-O5-BSd" customClass="VKScrubber">
+                                    <rect key="frame" x="46" y="8" width="198" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="R9o-9x-jt6"/>
+                                    </constraints>
+                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </slider>
+                                <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RwN-bq-5ht" customClass="VKScrubber">
+                                    <rect key="frame" x="46" y="8" width="198" height="29"/>
+                                    <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </slider>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NI-r6-2yb">
+                                    <rect key="frame" x="290" y="11" width="22" height="22"/>
+                                    <accessibility key="accessibilityConfiguration" label="Fullscreen"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="22" id="UZt-MB-z8I"/>
+                                        <constraint firstAttribute="height" constant="22" id="dme-3R-3Tn"/>
+                                    </constraints>
+                                    <state key="normal" image="VKVideoPlayer_zoom_in"/>
+                                    <connections>
+                                        <action selector="fullscreenButtonTapped:" destination="-1" eventType="touchUpInside" id="O7e-XR-Vhy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="RwN-bq-5ht" firstAttribute="height" secondItem="zNh-O5-BSd" secondAttribute="height" id="4jm-cQ-4Ot"/>
+                                <constraint firstItem="RwN-bq-5ht" firstAttribute="centerY" secondItem="zNh-O5-BSd" secondAttribute="centerY" id="5uy-KE-QZt"/>
+                                <constraint firstItem="RwN-bq-5ht" firstAttribute="trailing" secondItem="zNh-O5-BSd" secondAttribute="trailing" id="7eo-ti-8Uy"/>
+                                <constraint firstItem="RwN-bq-5ht" firstAttribute="leading" secondItem="zNh-O5-BSd" secondAttribute="leading" id="A4e-zC-mjp"/>
+                                <constraint firstItem="DnR-VJ-0Jd" firstAttribute="top" secondItem="vpb-xw-dlb" secondAttribute="top" id="Da2-p7-bD4"/>
+                                <constraint firstAttribute="bottom" secondItem="mlt-5u-Wdp" secondAttribute="bottom" id="MK9-pn-GB8"/>
+                                <constraint firstItem="9NI-r6-2yb" firstAttribute="centerY" secondItem="RwN-bq-5ht" secondAttribute="centerY" id="RMz-bg-fBc"/>
+                                <constraint firstItem="RwN-bq-5ht" firstAttribute="leading" secondItem="mlt-5u-Wdp" secondAttribute="trailing" constant="8" id="SKz-XN-ofO"/>
+                                <constraint firstAttribute="bottom" secondItem="DnR-VJ-0Jd" secondAttribute="bottom" id="TP0-u0-HKR"/>
+                                <constraint firstItem="zNh-O5-BSd" firstAttribute="centerY" secondItem="mlt-5u-Wdp" secondAttribute="centerY" id="UeW-WS-U0N"/>
+                                <constraint firstItem="9NI-r6-2yb" firstAttribute="leading" secondItem="DnR-VJ-0Jd" secondAttribute="trailing" constant="8" id="Yw2-Ma-fUM"/>
+                                <constraint firstAttribute="trailing" secondItem="9NI-r6-2yb" secondAttribute="trailing" constant="8" id="alu-Mm-kgx"/>
+                                <constraint firstAttribute="height" constant="44" id="fDG-rW-Xmn"/>
+                                <constraint firstItem="DnR-VJ-0Jd" firstAttribute="leading" secondItem="zNh-O5-BSd" secondAttribute="trailing" constant="8" id="iTI-6v-d0U"/>
+                                <constraint firstItem="mlt-5u-Wdp" firstAttribute="leading" secondItem="vpb-xw-dlb" secondAttribute="leading" constant="8" id="nZB-I0-n9a"/>
+                                <constraint firstItem="mlt-5u-Wdp" firstAttribute="top" secondItem="vpb-xw-dlb" secondAttribute="top" id="x5J-bP-Wql"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-e8-K6s" userLabel="Pause Button">
+                            <rect key="frame" x="138" y="68" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="Pause"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="NFk-l2-LVZ"/>
+                                <constraint firstAttribute="width" constant="44" id="soG-UX-Jva"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="VKVideoPlayer_pause">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected" image="VKVideoPlayer_play.png"/>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="6aR-v7-mGx"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-hg-NBJ" userLabel="Replay Button">
+                            <rect key="frame" x="138" y="68" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="Replay"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="9yn-t8-O6t"/>
+                                <constraint firstAttribute="height" constant="44" id="TUa-ds-y14"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" image="VKVideoPlayer_replay">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="replayButtonTapped:" destination="-1" eventType="touchUpInside" id="qcX-uJ-3mT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="E6M-sf-hVO" firstAttribute="leading" secondItem="6y2-ka-Z3P" secondAttribute="leading" id="G4x-SP-ycX"/>
+                        <constraint firstItem="vpb-xw-dlb" firstAttribute="leading" secondItem="6y2-ka-Z3P" secondAttribute="leading" id="QCj-VW-0eE"/>
+                        <constraint firstItem="4N6-e8-K6s" firstAttribute="centerX" secondItem="6y2-ka-Z3P" secondAttribute="centerX" id="cmU-y9-f83"/>
+                        <constraint firstAttribute="bottom" secondItem="vpb-xw-dlb" secondAttribute="bottom" id="cxT-Cu-vz3"/>
+                        <constraint firstAttribute="trailing" secondItem="vpb-xw-dlb" secondAttribute="trailing" id="e6x-zI-sdV"/>
+                        <constraint firstItem="E6M-sf-hVO" firstAttribute="top" secondItem="6y2-ka-Z3P" secondAttribute="top" id="iRG-5V-dmD"/>
+                        <constraint firstItem="4N6-e8-K6s" firstAttribute="centerY" secondItem="6y2-ka-Z3P" secondAttribute="centerY" id="irN-Fx-fJX"/>
+                        <constraint firstAttribute="trailing" secondItem="E6M-sf-hVO" secondAttribute="trailing" id="jGQ-s1-m1d"/>
+                        <constraint firstItem="BoR-hg-NBJ" firstAttribute="centerX" secondItem="6y2-ka-Z3P" secondAttribute="centerX" id="nV1-rQ-4Um"/>
+                        <constraint firstItem="BoR-hg-NBJ" firstAttribute="centerY" secondItem="6y2-ka-Z3P" secondAttribute="centerY" id="sGc-P3-YVf"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XCB-Zy-t8P">
+                    <rect key="frame" x="141" y="71" width="37" height="37"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="bO5-Aj-Fqy"/>
+                        <constraint firstAttribute="width" constant="37" id="pg6-me-2C3"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kkg-op-mFC" secondAttribute="trailing" id="0Ym-7h-bIa"/>
+                <constraint firstAttribute="trailing" secondItem="roo-bx-IJc" secondAttribute="trailing" id="5dA-Q7-Xm6"/>
+                <constraint firstAttribute="trailing" secondItem="cfn-hW-WG7" secondAttribute="trailing" id="EOM-Zo-CvJ"/>
+                <constraint firstItem="hrq-CS-0RS" firstAttribute="leading" secondItem="2CX-aN-Fwe" secondAttribute="leading" constant="20" id="F0e-Jk-XQx"/>
+                <constraint firstItem="XCB-Zy-t8P" firstAttribute="centerX" secondItem="2CX-aN-Fwe" secondAttribute="centerX" id="KGo-w3-NwI"/>
+                <constraint firstAttribute="trailing" secondItem="hrq-CS-0RS" secondAttribute="trailing" constant="20" id="Kqo-YI-WrW"/>
+                <constraint firstItem="XCB-Zy-t8P" firstAttribute="centerY" secondItem="2CX-aN-Fwe" secondAttribute="centerY" id="NQQ-bm-dCd"/>
+                <constraint firstItem="Kkg-op-mFC" firstAttribute="leading" secondItem="2CX-aN-Fwe" secondAttribute="leading" id="QTx-OB-cJX"/>
+                <constraint firstItem="6y2-ka-Z3P" firstAttribute="leading" secondItem="2CX-aN-Fwe" secondAttribute="leading" id="RCq-ZY-uF1"/>
+                <constraint firstAttribute="bottom" secondItem="cfn-hW-WG7" secondAttribute="bottom" id="SdL-5f-XbI"/>
+                <constraint firstAttribute="bottom" secondItem="Kkg-op-mFC" secondAttribute="bottom" id="Vb5-HJ-Vjl"/>
+                <constraint firstAttribute="bottom" secondItem="6y2-ka-Z3P" secondAttribute="bottom" id="Xbh-zM-f6Y"/>
+                <constraint firstAttribute="bottom" secondItem="hrq-CS-0RS" secondAttribute="bottom" constant="20" id="Zr9-nb-3WX"/>
+                <constraint firstItem="cfn-hW-WG7" firstAttribute="top" secondItem="2CX-aN-Fwe" secondAttribute="top" id="cIi-aF-A4g"/>
+                <constraint firstAttribute="bottom" secondItem="roo-bx-IJc" secondAttribute="bottom" id="gPv-Nl-mKQ"/>
+                <constraint firstItem="roo-bx-IJc" firstAttribute="top" secondItem="2CX-aN-Fwe" secondAttribute="top" id="iYX-Fd-ECd"/>
+                <constraint firstItem="Kkg-op-mFC" firstAttribute="top" secondItem="2CX-aN-Fwe" secondAttribute="top" id="ikN-lp-W3P"/>
+                <constraint firstItem="cfn-hW-WG7" firstAttribute="leading" secondItem="2CX-aN-Fwe" secondAttribute="leading" id="md4-dr-IPy"/>
+                <constraint firstAttribute="trailing" secondItem="6y2-ka-Z3P" secondAttribute="trailing" id="mnB-yI-Mlb"/>
+                <constraint firstItem="roo-bx-IJc" firstAttribute="leading" secondItem="2CX-aN-Fwe" secondAttribute="leading" id="o8d-bx-ekP"/>
+                <constraint firstItem="6y2-ka-Z3P" firstAttribute="top" secondItem="2CX-aN-Fwe" secondAttribute="top" id="uxj-7d-4P3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="54"/>
+        </view>
     </objects>
     <resources>
-        <image name="VKVideoPlayer_cross.png" width="17" height="17"/>
-        <image name="VKVideoPlayer_pause.png" width="17" height="17"/>
+        <image name="VKVideoPlayer_close" width="22" height="22"/>
+        <image name="VKVideoPlayer_pause" width="17" height="17"/>
         <image name="VKVideoPlayer_play.png" width="22" height="22"/>
-        <image name="VKVideoPlayer_replay.png" width="22" height="22"/>
+        <image name="VKVideoPlayer_replay" width="22" height="22"/>
+        <image name="VKVideoPlayer_zoom_in" width="16" height="16"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

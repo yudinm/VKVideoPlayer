@@ -86,23 +86,23 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     self.fullscreenButton.hidden = NO;
     
-    for (UIButton* button in @[
-                               self.topPortraitCloseButton
-                               ]) {
-        [button setBackgroundImage:[[UIImage imageWithColor:THEMECOLOR(@"colorBackground8")] imageByApplyingAlpha:0.6f] forState:UIControlStateNormal];
-        button.layer.cornerRadius = 4.0f;
-        button.clipsToBounds = YES;
-    }
-    
-    [self.topPortraitCloseButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    //    for (UIButton* button in @[
+    //                               self.topPortraitCloseButton
+    //                               ]) {
+    //        [button setBackgroundImage:[[UIImage imageWithColor:THEMECOLOR(@"colorBackground8")] imageByApplyingAlpha:0.6f] forState:UIControlStateNormal];
+    //        button.layer.cornerRadius = 4.0f;
+    //        button.clipsToBounds = YES;
+    //    }
+    //
+    //    [self.topPortraitCloseButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     self.playerControlsAutoHideTime = @4.5;
     
-//    [self.scrubber setMaximumTrackImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
-//    [self.progressBar setThumbImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
-//    [self.progressBar setMinimumTrackImage:
-//     [[UIImage imageNamed:@"VKScrubber_min"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)]
-//                                  forState:UIControlStateNormal];
+    //    [self.scrubber setMaximumTrackImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
+    //    [self.progressBar setThumbImage:[UIImage imageNamed:@"VKScrubber_max_t"] forState:UIControlStateNormal];
+    //    [self.progressBar setMinimumTrackImage:
+    //     [[UIImage imageNamed:@"VKScrubber_min"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)]
+    //                                  forState:UIControlStateNormal];
     
 }
 
@@ -142,7 +142,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 - (IBAction)replayButtonTapped:(id)sender {
-
+    
     _replayButton.hidden = YES;
     _playButton.hidden = NO;
     
@@ -180,7 +180,6 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     [self.delegate doneButtonTapped];
 }
 
-
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self.scrubber) {
         if ([keyPath isEqualToString:@"maximumValue"]) {
@@ -191,12 +190,12 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         }
     }
     
-    if ([object isKindOfClass:[UIButton class]]) {
-        UIButton* button = object;
-        if ([button isDescendantOfView:self.topControlOverlay]) {
-            [self layoutTopControls];
-        }
-    }
+    //    if ([object isKindOfClass:[UIButton class]]) {
+    //        UIButton* button = object;
+    //        if ([button isDescendantOfView:self.topControlOverlay]) {
+    ////            [self layoutTopControls];
+    //        }
+    //    }
 }
 
 - (void)setDelegate:(id<VKVideoPlayerViewDelegate>)delegate {
@@ -235,46 +234,46 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 - (void)updateTimeLabels {
     DDLogVerbose(@"Updating TimeLabels: %f", self.scrubber.value);
     
-    [self.currentTimeLabel setFrameWidth:100.0f];
-    [self.totalTimeLabel setFrameWidth:100.0f];
+//    [self.currentTimeLabel setFrameWidth:100.0f];
+//    [self.totalTimeLabel setFrameWidth:100.0f];
     
     self.currentTimeLabel.text = [VKSharedUtility timeStringFromSecondsValue:(int)self.scrubber.value];
-    [self.currentTimeLabel sizeToFit];
-    [self.currentTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
+//    [self.currentTimeLabel sizeToFit];
+//    [self.currentTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
     
     self.totalTimeLabel.text = [VKSharedUtility timeStringFromSecondsValue:(int)self.scrubber.maximumValue];
-    [self.totalTimeLabel sizeToFit];
-    [self.totalTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
+//    [self.totalTimeLabel sizeToFit];
+//    [self.totalTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
     
-    [self layoutSlider];
+    //    [self layoutSlider];
 }
 
-- (void)layoutSliderForOrientation;
-{
-    [self.currentTimeLabel setFrameOriginX:PADDING];
-    [self.totalTimeLabel setFrameOriginX:CGRectGetWidth(self.bottomControlOverlay.frame) - self.totalTimeLabel.frame.size.width - PADDING];
-    [self.scrubber setFrameOriginX:CGRectGetMaxX(self.currentTimeLabel.frame) + PADDING];
-    [self.scrubber setFrameWidth:CGRectGetMinX(self.totalTimeLabel.frame) - PADDING * 2 - CGRectGetMaxX(self.currentTimeLabel.frame)];
-    [self.scrubber setFrameOriginY:CGRectGetHeight(self.bottomControlOverlay.frame)/2 - CGRectGetHeight(self.scrubber.frame)/2];
-    
-    [self.progressBar setFrame:self.scrubber.frame];
-}
+//- (void)layoutSliderForOrientation;
+//{
+//    [self.currentTimeLabel setFrameOriginX:PADDING];
+//    [self.totalTimeLabel setFrameOriginX:CGRectGetWidth(self.bottomControlOverlay.frame) - self.totalTimeLabel.frame.size.width - PADDING];
+//    [self.scrubber setFrameOriginX:CGRectGetMaxX(self.currentTimeLabel.frame) + PADDING];
+//    [self.scrubber setFrameWidth:CGRectGetMinX(self.totalTimeLabel.frame) - PADDING * 2 - CGRectGetMaxX(self.currentTimeLabel.frame)];
+//    [self.scrubber setFrameOriginY:CGRectGetHeight(self.bottomControlOverlay.frame)/2 - CGRectGetHeight(self.scrubber.frame)/2];
 
-- (void)layoutSlider {
-    [self layoutSliderForOrientation];
-}
+//    [self.progressBar setFrame:self.scrubber.frame];
+//}
 
-- (void)layoutTopControls {
-    
+//- (void)layoutSlider {
+//    [self layoutSliderForOrientation];
+//}
+
+//- (void)layoutTopControls {
+
 //    CGFloat rightMargin = CGRectGetMaxX(self.topControlOverlay.frame);
 //    for (UIView* button in self.topControlOverlay.subviews) {
 //        if ([button isKindOfClass:[UIButton class]] && button != self.doneButton && !button.hidden) {
 //            rightMargin = MIN(CGRectGetMinX(button.frame), rightMargin);
 //        }
 //    }
-    
+
 //    [self.titleLabel setFrameWidth:rightMargin - CGRectGetMinX(self.titleLabel.frame) - 20];
-}
+//}
 
 - (void)setPlayButtonsSelected:(BOOL)selected {
     self.playButton.selected = selected;
@@ -376,7 +375,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         
     }
     
-    [self layoutTopControls];
+    //    [self layoutTopControls];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
