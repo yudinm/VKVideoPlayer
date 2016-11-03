@@ -234,16 +234,16 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 - (void)updateTimeLabels {
     DDLogVerbose(@"Updating TimeLabels: %f", self.scrubber.value);
     
-    [self.currentTimeLabel setFrameWidth:100.0f];
-    [self.totalTimeLabel setFrameWidth:100.0f];
+//    [self.currentTimeLabel setFrameWidth:100.0f];
+//    [self.totalTimeLabel setFrameWidth:100.0f];
     
     self.currentTimeLabel.text = [VKSharedUtility timeStringFromSecondsValue:(int)self.scrubber.value];
-    [self.currentTimeLabel sizeToFit];
-    [self.currentTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
+//    [self.currentTimeLabel sizeToFit];
+//    [self.currentTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
     
     self.totalTimeLabel.text = [VKSharedUtility timeStringFromSecondsValue:(int)self.scrubber.maximumValue];
-    [self.totalTimeLabel sizeToFit];
-    [self.totalTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
+//    [self.totalTimeLabel sizeToFit];
+//    [self.totalTimeLabel setFrameHeight:CGRectGetHeight(self.bottomControlOverlay.frame)];
     
     //    [self layoutSlider];
 }
