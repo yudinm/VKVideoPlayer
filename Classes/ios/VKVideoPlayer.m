@@ -965,12 +965,13 @@ typedef enum {
 
 - (void)fullScreenButtonTapped {
     self.isFullScreen = self.view.fullscreenButton.selected;
-    
+
 //    if (self.isFullScreen) {
 //        [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
 //    } else {
 //        [self performOrientationChange:UIInterfaceOrientationPortrait];
 //    }
+    
     
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapFullScreen];

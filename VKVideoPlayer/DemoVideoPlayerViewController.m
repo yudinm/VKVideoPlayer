@@ -6,6 +6,7 @@
 #import "DemoVideoPlayerViewController.h"
 #import "VKVideoPlayer.h"
 #import "VKVideoPlayerCaptionSRT.h"
+#import "VKVideoPlayerViewController.h"
 
 
 @interface DemoVideoPlayerViewController ()
@@ -115,6 +116,17 @@
       }
     });
   }
+    
+    if (event == VKVideoPlayerControlEventTapFullScreen) {
+        [self.player pauseContent];
+        VKVideoPlayerViewController *videoController = [[VKVideoPlayerViewController alloc] init];
+        // TODO
+        [self presentViewController:videoController animated:YES completion:^{
+            [videoController.player loadVideoWithTrack:self.player.track];
+            [videoController.player.track setLastDurationWatchedInSeconds:@(self.player.currentTime)];
+            [videoController.player seekToLastWatchedDuration];
+        }];
+    }
 }
 
 - (void)setLanguageCode:(NSString*)code {
