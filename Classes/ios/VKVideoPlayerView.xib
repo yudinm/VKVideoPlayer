@@ -9,7 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VKVideoPlayerView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VKVideoPlayerView">
+            <connections>
+                <outlet property="activityIndicator" destination="XCB-Zy-t8P" id="PhZ-1b-YWJ"/>
+                <outlet property="btFullscreen" destination="9NI-r6-2yb" id="Zel-cc-GwY"/>
+                <outlet property="currentTimeLabel" destination="mlt-5u-Wdp" id="I9N-zr-vDr"/>
+                <outlet property="doneButton" destination="F7P-eL-OgW" id="JtP-Xv-rCJ"/>
+                <outlet property="fullscreenButton" destination="9NI-r6-2yb" id="zCI-Xo-jyO"/>
+                <outlet property="playButton" destination="4N6-e8-K6s" id="DnV-XK-awe"/>
+                <outlet property="playerLayerView" destination="cfn-hW-WG7" id="6xW-4T-Gbm"/>
+                <outlet property="playerShadow" destination="wWM-Di-1im" id="yYI-kK-hMt"/>
+                <outlet property="progressBar" destination="zNh-O5-BSd" id="yHF-MS-7VB"/>
+                <outlet property="replayButton" destination="BoR-hg-NBJ" id="bgy-dB-zgY"/>
+                <outlet property="scrubber" destination="RwN-bq-5ht" id="DTk-5C-i3L"/>
+                <outlet property="titleLabel" destination="FrW-rf-VHB" id="mrx-hb-zXq"/>
+                <outlet property="totalTimeLabel" destination="DnR-VJ-0Jd" id="mLQ-pa-ady"/>
+                <outlet property="view" destination="2CX-aN-Fwe" id="2hy-ar-Lyh"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tapGestureRecognizer id="49">
             <connections>
@@ -173,11 +190,15 @@ Your video will resume shortly.</string>
                                 </slider>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NI-r6-2yb">
                                     <rect key="frame" x="290" y="11" width="22" height="22"/>
+                                    <accessibility key="accessibilityConfiguration" label="Fullscreen"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="22" id="UZt-MB-z8I"/>
                                         <constraint firstAttribute="height" constant="22" id="dme-3R-3Tn"/>
                                     </constraints>
                                     <state key="normal" image="VKVideoPlayer_zoom_in"/>
+                                    <connections>
+                                        <action selector="fullscreenButtonTapped:" destination="-1" eventType="touchUpInside" id="O7e-XR-Vhy"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,8 +221,9 @@ Your video will resume shortly.</string>
                                 <constraint firstItem="mlt-5u-Wdp" firstAttribute="top" secondItem="vpb-xw-dlb" secondAttribute="top" id="x5J-bP-Wql"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-e8-K6s">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-e8-K6s" userLabel="Pause Button">
                             <rect key="frame" x="138" y="68" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="Pause"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="NFk-l2-LVZ"/>
                                 <constraint firstAttribute="width" constant="44" id="soG-UX-Jva"/>
@@ -215,9 +237,13 @@ Your video will resume shortly.</string>
                             <state key="highlighted">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="6aR-v7-mGx"/>
+                            </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-hg-NBJ">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoR-hg-NBJ" userLabel="Replay Button">
                             <rect key="frame" x="138" y="68" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="Replay"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="9yn-t8-O6t"/>
                                 <constraint firstAttribute="height" constant="44" id="TUa-ds-y14"/>
@@ -230,6 +256,9 @@ Your video will resume shortly.</string>
                             <state key="highlighted">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="replayButtonTapped:" destination="-1" eventType="touchUpInside" id="qcX-uJ-3mT"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +286,7 @@ Your video will resume shortly.</string>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Kkg-op-mFC" secondAttribute="trailing" id="0Ym-7h-bIa"/>

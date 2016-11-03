@@ -88,9 +88,6 @@
 @property (nonatomic, strong) IBOutlet UIImageView* externalDeviceImageView;
 @property (nonatomic, strong) IBOutlet UILabel* externalDeviceLabel;
 
-@property (nonatomic, strong) IBOutlet UIView* topPortraitControlOverlay;
-@property (nonatomic, strong) IBOutlet UIButton* topPortraitCloseButton;
-
 @property (nonatomic, strong) IBOutlet UIImageView* playerShadow;
 
 @property (nonatomic, strong) NSNumber* playerControlsAutoHideTime;

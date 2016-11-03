@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "VKVideoPlayer_play.png",
+      "filename" : "VKVideoPlayer_zoom_out.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "VKVideoPlayer_play@2x.png",
+      "filename" : "VKVideoPlayer_zoom_out@2x.png",
       "scale" : "2x"
     },
     {
