@@ -91,7 +91,6 @@
 @property (nonatomic, strong) IBOutlet UIImageView* playerShadow;
 
 @property (nonatomic, strong) NSNumber* playerControlsAutoHideTime;
-@property (unsafe_unretained, nonatomic) IBOutlet UIButton *btFullscreen;
 
 - (IBAction)fullscreenButtonTapped:(id)sender;
 - (IBAction)playButtonTapped:(id)sender;

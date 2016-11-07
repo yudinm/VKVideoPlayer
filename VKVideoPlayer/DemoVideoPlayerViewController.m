@@ -25,10 +25,12 @@
   [self.view addSubview:self.player.view];
   
   [self addDemoControl];
+    
+    [self playSampleClip1];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [self playSampleClip1];
+//  [self playSampleClip1];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -118,13 +120,31 @@
   }
     
     if (event == VKVideoPlayerControlEventTapFullScreen) {
+        
+        if ([self.presentedViewController isKindOfClass:[VKVideoPlayerViewController class]]) {
+            VKVideoPlayerViewController *videoController = (VKVideoPlayerViewController *)self.presentedViewController;
+            if (!videoController.player.isFullScreen) {
+                return;
+            }
+//            NSTimeInterval lastFullscreenTime = videoController.player.currentTime;
+//            [self.player seekToTimeInSecond:lastFullscreenTime userAction:NO completionHandler:^(BOOL finished) {
+                [videoController dismissViewControllerAnimated:YES completion:^{
+                    self.player.fullScreen = NO;
+//                    [self.player seekToLastWatchedDuration];
+                }];
+
+//            }];
+            return;
+        }
         [self.player pauseContent];
         VKVideoPlayerViewController *videoController = [[VKVideoPlayerViewController alloc] init];
-        // TODO
         [self presentViewController:videoController animated:YES completion:^{
+//            [self.player.track setLastDurationWatchedInSeconds:@(self.player.currentTime)];
             [videoController.player loadVideoWithTrack:self.player.track];
-            [videoController.player.track setLastDurationWatchedInSeconds:@(self.player.currentTime)];
-            [videoController.player seekToLastWatchedDuration];
+//            [videoController.player.track setLastDurationWatchedInSeconds:@(self.player.currentTime)];
+//            [videoController.player seekToLastWatchedDuration];
+            videoController.player.fullScreen = YES;
+            videoController.player.delegate = self;
         }];
     }
 }
