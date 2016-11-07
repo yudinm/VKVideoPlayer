@@ -7,10 +7,12 @@
 #import "VKVideoPlayerConfig.h"
 
 @interface VKVideoPlayerViewController: UIViewController <
-  VKVideoPlayerDelegate
+VKVideoPlayerDelegate
 >
 
 @property (nonatomic, strong) VKVideoPlayer* player;
 - (void)playVideoWithStreamURL:(NSURL*)streamURL;
 - (void)setSubtitle:(VKVideoPlayerCaption*)subtitle;
+- (id)initWithPlayer:(VKVideoPlayer *)player;
+
 @end

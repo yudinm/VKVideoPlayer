@@ -159,9 +159,9 @@ Your video will resume shortly.</string>
                             <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnR-VJ-0Jd">
-                                    <rect key="frame" x="250" y="0.0" width="32" height="44"/>
+                                    <rect key="frame" x="228" y="0.0" width="32" height="44"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="32" id="D7p-Az-85t"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="D7p-Az-85t"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -170,29 +170,29 @@ Your video will resume shortly.</string>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-5u-Wdp">
                                     <rect key="frame" x="8" y="0.0" width="32" height="44"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="32" id="Y2d-Be-YzO"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="Y2d-Be-YzO"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000596046448" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zNh-O5-BSd" customClass="VKScrubber">
-                                    <rect key="frame" x="46" y="8" width="198" height="29"/>
+                                    <rect key="frame" x="46" y="8" width="176" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="28" id="R9o-9x-jt6"/>
                                     </constraints>
                                     <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </slider>
                                 <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000298023224" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RwN-bq-5ht" customClass="VKScrubber">
-                                    <rect key="frame" x="46" y="8" width="198" height="29"/>
+                                    <rect key="frame" x="46" y="8" width="176" height="29"/>
                                     <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </slider>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NI-r6-2yb">
-                                    <rect key="frame" x="290" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="268" y="0.0" width="44" height="44"/>
                                     <accessibility key="accessibilityConfiguration" label="Fullscreen"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="22" id="UZt-MB-z8I"/>
-                                        <constraint firstAttribute="height" constant="22" id="dme-3R-3Tn"/>
+                                        <constraint firstAttribute="width" constant="44" id="UZt-MB-z8I"/>
+                                        <constraint firstAttribute="height" constant="44" id="dme-3R-3Tn"/>
                                     </constraints>
                                     <state key="normal" image="VKVideoPlayer_zoom_in"/>
                                     <connections>
